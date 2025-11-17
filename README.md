@@ -63,26 +63,54 @@ The WritePlace is a full-stack notes application designed with a focus on speed,
 
 ---
 
-## 📁 Project Structure
-
+### File Structure :
 ```
 the-writeplace-backend/
 ├── src/
-│   ├── config/              # Configuration files (DB, JWT, etc.)
-│   ├── controllers/         # Route controllers and business logic
-│   ├── middleware/          # Custom middleware (auth, validation, errors)
-│   ├── models/              # Database models and queries
-│   ├── routes/              # API route definitions
-│   ├── utils/               # Helper functions and utilities
-│   └── app.js              # Main Express application
-├── tests/                   # Unit and integration tests
-├── .env                     # Environment variables (not in repo)
-├── .env.example            # Environment variables template
-├── .gitignore              # Git ignore rules
-├── package.json            # Project dependencies and scripts
-└── README.md               # Project documentation
+│   ├── config/
+│   │   ├── database.js       NEW
+│   │   ├── initDB.js         NEW
+│   │   └── schema.sql        NEW
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   └── app.js                UPDATED
+├── .env                      UPDATED
+├── .env.example
+├── .gitignore
+├── package.json             UPDATED
+├── package-lock.json        UPDATED
+└── README.md
 ```
 
+---
+
+##  Troubleshooting
+
+### "Access denied for user 'root'@'localhost'"
+```bash
+# Reset MySQL root password or use correct password in .env
+```
+
+### "Cannot connect to MySQL server"
+```bash
+# Check if MySQL is running
+# Windows: Check Services
+# Mac/Linux: sudo service mysql status
+```
+
+### "Database already exists" error
+```bash
+# This is fine! The script handles existing databases
+```
+
+### Port 3306 already in use
+```bash
+# Another MySQL instance might be running
+# Or change DB_PORT in .env to 3307
+```
 ---
 
 ##  Getting Started
