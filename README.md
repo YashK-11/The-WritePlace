@@ -187,14 +187,6 @@ DB_PASSWORD=your_mysql_password
 DB_NAME=writeplace_db
 DB_PORT=3306
 
-# JWT Configuration
-JWT_SECRET=your_super_secret_jwt_key_change_this
-JWT_EXPIRE=7d
-JWT_REFRESH_SECRET=your_refresh_token_secret
-JWT_REFRESH_EXPIRE=30d
-
-# CORS Configuration
-CORS_ORIGIN=http://localhost:3000
 ```
 ---
 
